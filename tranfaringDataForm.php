@@ -24,15 +24,22 @@
             $sql = "UPDATE customers SET balance='$update_balance_reciver' WHERE `name`='$reciver_name'";
             $sql2 = "UPDATE customers SET balance='$update_balance' WHERE `name`='$sender_name'";   
             
+            $sender_id = $row['id'];
+            $reciver_id = $info['id'];
+            $insertion = "INSERT INTO transfars (transfar_to,transfar_from,amount_of_money) VALUES ($reciver_id,$sender_id,$amount_of_moeny)";
+
             $stmt= $conn->prepare($sql);
             $stmt->execute();
             $stmt= $conn->prepare($sql2);
             $stmt->execute();
+
+            $stmt= $conn->prepare($insertion);
+            $stmt->execute();
         }
     }
 
-    echo "<p style='text-algin:center;'>Successfully transition,Thanke for using out app</p>";
-    echo "<p style='text-algin:center;'><a href='./index.html'>click here to redirect to the home page</a><p>";
+    echo "<p>Successfully transition,Thanke for using out app</p>";
+    echo "<p><a href='./index.html'>click here to redirect to the home page</a><p>";
 
 
 ?>
