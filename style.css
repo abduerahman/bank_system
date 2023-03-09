@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --width:0;
+}
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+body nav{
+    display: flex;
+    justify-content: space-around;
+    padding:1em;
+    width:97.5vw;
+    background-color:#92a5b5;
+}
+
+nav span{
+    color:white;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+nav a{
+    color:white;
+    text-decoration: none;
+    font-size: 0.9em;  
+    padding:8px;
+}
+
+nav a::after{
+    content: '';
+    display: block;
+    bottom: 0;
+    left:0;
+    width:var(--width);
+    height:2px;
+    background-color: #871e35;
+    transition: 1s ease-in-out;
+}
+
+nav a:hover{
+    animation: increasingWidth 2s ease-in-out;
+}
+
+@keyframes increasingWidth {
+    0%{
+        --width:0%;
+    }
+    100%{
+        --width:100%;
+    }
+}
+
+main{
+    width:99vw;
+    height:85vh;
+}
+main h1{
+    text-align: center;
+    margin-top: 5%;
+}
+
+table{
+    width:99vw;
+    margin-left:0.5%;
+    margin-top:2%;
+    border-radius: 10px;
+}
+
+table a{
+    text-decoration: none;
+}
+tr#define{
+    background-color: rgb(28, 140, 215);
+}
+
+th{
+    border-radius: 5px;
+    padding:5px;
+    margin:0;
+}
+td{
+    text-align: center;
+}
+td,tr{
+    padding:5px;
+}
+
+#row1{
+    background-color: beige;
+}
+
+.container{
+    width:35vw;
+    height:max-content;
+    position: absolute;
+    top:5%;
+    left:32.5%;
+    transition: 1s ease;
+    background-color: rgb(24, 91, 135);
+    padding:1em;
+    border-radius: 10px;
+}
+.container p{
+    margin:1em;
+    color:white;
+    font-size:20px;
+}
+.container span{
+    color:white;
+    font-size:25px;
+}
+
+.container button{
+    color:white;
+    font-size:20px;
+    background-color: rgb(15, 139, 222);
+    padding:10px;
+    border:none;
+    outline:none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tranfaring_data_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-color:#318ce7;
+}
+
+.input_data{
+    color:white;
+    font-size:25px;
+    width:100%;
+}
+.input_data input{
+    outline: none;
+    font-weight: 100;
+    border:1px solid white;
+    background-color:transparent;
+    color:white;
+    font-size:20px;
+}
+#submit{
+    text-align: center;
+}
+#submit_btn{
+    padding:10px;
+    color:white;
+    font-size:25px;
+    background-color: transparent;
+    border:none;
+    transition: 1s ease-in-out;
+}
+#submit_btn:hover{
+    transform: scale(1.1);
+}
