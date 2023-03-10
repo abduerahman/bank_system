@@ -63,7 +63,7 @@
                     </body>
                     <footer>
                         <button onclick="openFormWindow()">Transfare Money</button>
-                        <button onclick="closingForm($this)">Close</button>
+                        <button onclick="closingForm(this)">Close</button>
                     </footer>
                 </div>
             `;
